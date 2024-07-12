@@ -42,5 +42,5 @@ Remember, every expert was once a beginner. Here's to the exciting road ahead in
 
 ---
 
-*"The only way to do great work is to love what you do." - Steve Jobs*
+*"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." - Brian Herbert*
 
