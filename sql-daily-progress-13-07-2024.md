@@ -47,7 +47,7 @@ FROM Track AS t
 ORDER BY t.UnitPrice;
 ```
 
-### 2. Analyzing Purchase Types (Version 1)
+### 2. Analyzing Purchase Types
 
 ```sql
 /*
@@ -74,33 +74,7 @@ WHERE PurchaseType = 'Top Performer'
 ORDER BY total DESC
 ```
 
-### 3. Analyzing Purchase Types (Version 2)
-
-```sql
-/*
-WSDA Music Sales Goal:
-They want as many customers as possible to spend between $7.00 and $15.00
-Sales Categories:
-Baseline Purchase - Between $0.99 and $1.99
-Low Purchase - Between $2.00 and $6.99
-Target Purchase - Between $7.00 and $15.00
-Top Performer - Above $15.00
-Created by: Firat
-Created Date: 07/13/2024
-Description: Get all invoices that are greater than 1.98 from any cities whose name start with P or starts with D?
-*/
-SELECT
-InvoiceDate, BillingAddress, BillingCity, total,
-CASE WHEN total < 2.00 THEN 'Baseline Purchase'
-WHEN total Between 2.00 and 6.99 THEN 'Low Purchase'
-WHEN total Between 7.00 and 15.00 THEN 'Target Purchase'
-ELSE 'Top Performer'
-END AS PurchaseType
-FROM Invoice
-ORDER BY PurchaseType DESC
-```
-
-### 4. Filtering Invoices by City and Total
+### 3. Filtering Invoices by City and Total
 
 ```sql
 /*
